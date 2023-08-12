@@ -6,52 +6,54 @@ Olá meu nome é Rafael Vieira, tenho 24 anos no momento estou solteiro, amo a �
 # Passo a Passo
 
 ```shell
-	npm init vite@latest
+npm init vite@latest
 ```
 > **Nota:** Preenchimento das informações solicitadas na criação do projeto, nome, framework e linguagem.
 	
 ```shell
-	cd <project name>
-	npm install
-	npm install -D tailwindcss postcss autoprefixer
-	npx tailwind init -p
-	npm i @rocketseat/eslint-config -D
-	npm i prettier-plugin-tailwindcss -D	 
+cd <project name>
+npm install
+npm install -D tailwindcss postcss autoprefixer
+npx tailwind init -p
+npm i @rocketseat/eslint-config -D
+npm i prettier-plugin-tailwindcss -D
+npm install lucide-react -D	 
+npm install react-type-animation
 ```
 
 > **Nota:** Na raiz do projeto devemos criar o arquivo **prettier.config.js** e nele devemos inserir os seguintes comandos:
 
 ```js
-	module.exports = {
-	  plugins: [require('prettier-plugin-tailwindcss')],
-	}
+module.exports = {
+  plugins: [require('prettier-plugin-tailwindcss')],
+}
 ```
 > **Nota:** No Arquivo **tailwind.config.js** devemos inserir os seguintes códigos:
 
 ```js
-	/** @type  {import('tailwindcss').Config} */
-	module.exports = {
-	  content: [
-	    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-	    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-	    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-	  ],
-	  theme: {
-	    extend: {},
-	  },
-	  plugins: [require('@tailwindcss/forms')],
-	}
+/** @type  {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [require('@tailwindcss/forms')],
+}
 ```
 
 > **Nota:** No Arquivo **.eslintrc.cjs** devemos inserir os seguintes códigos:
 
 ```js
-	{
-		"extends": 
-		[
-			"@rocketseat/eslint-config/react"
-		]
-	}
+{
+	"extends": 
+	[
+		"@rocketseat/eslint-config/react"
+	]
+}
 ```
 
 	
@@ -59,13 +61,34 @@ Olá meu nome é Rafael Vieira, tenho 24 anos no momento estou solteiro, amo a �
 ## Estrutura de pastas
 
 ```shell
-  $ tree
-  .
-  ├── lib
-  │   └── blackjack.ex
-  ├── mix.exs
-  ├── README.md
-  └── test
-      ├── blackjack_test.exs
-      └── test_helper.exs
+ src
+ ├── App.tsx
+ ├── main.tsx
+ ├── index.css
+ ├── vite-env.d.ts	 
+ ├── assets
+ ├── components
+  ├── Main
+	  ├── index.tsx
+  ├── Sidebar
+	  ├── index.tsx
+	  ├── SidebarContent.tsx
+	  ├── SidebarIcon.tsx
+	  ├── SidebarRoot.tsx
+  ├── SidebarDesk
+	  ├── index.tsx
+	  ├── SidebarDeskContent.tsx
+	  ├── SidebarDeskIcon.tsx
+	  ├── SidebarDeskRoot.tsx
+  ├── Sidenav
+	  ├── index.tsx
+	  ├── Data
+		  ├── index.tsx
+  ├── Work
+	  ├── index.tsx
+	  ├── WorkContent.tsx
+	  ├── WorkRoot.tsx
+	  ├── Data
+		  ├── index.tsx
+
 ```
