@@ -32,31 +32,50 @@ module.exports = {
 
 ```js
 /** @type  {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [require('@tailwindcss/forms')],
+
+module.exports  = {
+	content: ["./src/**/*.{js,ts,jsx,tsx}"],
+	theme: {
+		variants: {
+			animation: ["motion-safe"],
+		},
+		extend: {
+			animation: {
+				fadeIn:  "fadeIn 2s ease-in forwards"
+			},
+			keyframes: {
+				fadeIn: {
+				"0%": { opacity:  0 },
+				"100%": { opacity:  1 }
+				}
+			}
+		},
+	}
 }
 ```
 
 > **Nota:** No Arquivo **.eslintrc.cjs** devemos inserir os seguintes códigos:
 
 ```js
-{
-	"extends": 
-	[
-		"@rocketseat/eslint-config/react"
-	]
+module.exports  = {
+	env: { browser:  true, es2020:  true },
+	extends: [
+		'eslint:recommended',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:react-hooks/recommended',
+		'@rocketseat/eslint-config/react'
+	],
+	parser:  '@typescript-eslint/parser',
+	parserOptions: { 
+		ecmaVersion:  'latest', 
+		sourceType:  'module' 
+	},
+	plugins: ['react-refresh'],
+	rules: {
+		'react-refresh/only-export-components':  'warn',
+	},
 }
 ```
-
-	
 
 ## Estrutura de pastas
 
@@ -68,27 +87,27 @@ module.exports = {
  ├── vite-env.d.ts	 
  ├── assets
  ├── components
-  ├── Main
-	  ├── index.tsx
-  ├── Sidebar
-	  ├── index.tsx
-	  ├── SidebarContent.tsx
-	  ├── SidebarIcon.tsx
-	  ├── SidebarRoot.tsx
-  ├── SidebarDesk
-	  ├── index.tsx
-	  ├── SidebarDeskContent.tsx
-	  ├── SidebarDeskIcon.tsx
-	  ├── SidebarDeskRoot.tsx
-  ├── Sidenav
-	  ├── index.tsx
-	  ├── Data
-		  ├── index.tsx
-  ├── Work
-	  ├── index.tsx
-	  ├── WorkContent.tsx
-	  ├── WorkRoot.tsx
-	  ├── Data
-		  ├── index.tsx
+	├── Main
+		├── index.tsx
+	├── Sidebar
+		├── index.tsx
+		├── SidebarContent.tsx
+		├── SidebarIcon.tsx
+		├── SidebarRoot.tsx
+	├── SidebarDesk
+		├── index.tsx
+		├── SidebarDeskContent.tsx
+		├── SidebarDeskIcon.tsx
+		├── SidebarDeskRoot.tsx
+	├── Sidenav
+		 ├── index.tsx
+		 ├── Data
+			├── index.tsx
+	├── Work
+		 ├── index.tsx
+		 ├── WorkContent.tsx
+		 ├── WorkRoot.tsx
+		 ├── Data
+			 ├── index.tsx
 
 ```
