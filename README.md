@@ -87,7 +87,7 @@ module.exports  = {
  ├── vite-env.d.ts	 
  ├── assets
  ├── components
-	├── Main
+ 	├── Main
 		├── index.tsx
 	├── Sidebar
 		├── index.tsx
