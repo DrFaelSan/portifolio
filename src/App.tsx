@@ -1,7 +1,8 @@
 import Main from "./components/Main"
 import Sidenav from "./components/Sidenav"
+import { Project } from "./components/Project"
 import { Work } from "./components/Work"
-import { WorkData, WorkItemData } from "./components/Work/Data"
+import About from "./components/About"
 
 function App() {
   return (
@@ -9,19 +10,12 @@ function App() {
       <Sidenav/>
       <Main />
       <Work.Root>
-        {
-          WorkData?.map((el: WorkItemData, index: number) => 
-            <Work.Content 
-              key={index} 
-              title={el.title} 
-              year={el.year} 
-              datails={el.datails}
-              duration={el.duration}
-              techs={el.techs}
-            />  
-          )
-        }
+       <Work.Content />
       </Work.Root>
+      <Project.Root>
+        <Project.Content/>
+      </Project.Root>
+      <About/>
     </div>
   )
 }

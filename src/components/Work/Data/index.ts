@@ -44,20 +44,20 @@ export const WorkData : WorkItemData[] = [
               'Integração com API Itaú para geração de boletos e API da intermeio para pagamentos Split. '+
               'Versionamento de código com Git e GitHub. ',
     techs: ['C#','Postman','SQL SERVER','Selenium','Flutter','Vue', 'TypeScript','Xunit']
-  },
-  {
-    year: 2017,
-    title: 'ECO POSTO BANDEIRANTES LTDA',
-    duration: '1 ano e 3 meses',
-    datails: 'Vendedor de Pista, Caixa e Abastecedor de veiculos',
-    techs: undefined
-  },
-  {
-    year: 2014,
-    title: 'CONCREMAT ENGENHARIA E TECNOLOGIA S/A - CAMP JABAQUARA',
-    duration: '1 ano e 3 meses',
-    datails: 'Office Boy, criador de relátorio com Word/Excel, troca de galões de água e envio de documentos internos e externos.',
-    techs: undefined
-  },
+  }
+  // {
+  //   year: 2017,
+  //   title: 'ECO POSTO BANDEIRANTES LTDA',
+  //   duration: '1 ano e 3 meses',
+  //   datails: 'Vendedor de Pista, Caixa e Abastecedor de veiculos',
+  //   techs: undefined
+  // },
+  // {
+  //   year: 2014,
+  //   title: 'CONCREMAT ENGENHARIA E TECNOLOGIA S/A - CAMP JABAQUARA',
+  //   duration: '1 ano e 3 meses',
+  //   datails: 'Office Boy, criador de relátorio com Word/Excel, troca de galões de água e envio de documentos internos e externos.',
+  //   techs: undefined
+  // },
 ];
   

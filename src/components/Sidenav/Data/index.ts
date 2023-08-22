@@ -1,4 +1,4 @@
-import { AtSign, Briefcase, FolderOpen, Home, UserSquare } from "lucide-react";
+import { Briefcase, FolderOpen, Home, UserSquare } from "lucide-react";
 import { ElementType } from "react";
 
 export type SideBarItem = {
@@ -27,11 +27,6 @@ export const Data : SideBarItem[] = [
     link: '#sobre',
     sidebarText: 'Sobre',
     icon: UserSquare  
-  },
-  {
-    link: '#contato',
-    sidebarText: 'Contatos',
-    icon: AtSign  
-  },
+  }
   
 ]
